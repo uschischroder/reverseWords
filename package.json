@@ -1,0 +1,15 @@
+{
+  "name": "reverse-words",
+  "version": "1.0.0",
+  "description": "Tool for reverse all the words.",
+  "main": "index.js",
+  "scripts": {
+    "test": "qunit",
+    "test2": "echo oi"
+  },
+  "author": "Uschi Schröder de Toledo",
+  "license": "ISC",
+  "devDependencies": {
+    "qunit": "^2.5.0"
+  }
+}
