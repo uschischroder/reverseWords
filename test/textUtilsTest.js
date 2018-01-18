@@ -5,12 +5,12 @@ var textUtilsInstance = new textUtils();
 
 QUnit.test( 'Test reverse() returns empty for empty param.', function( assert ) {
     var result = textUtilsInstance.reverse('');
-    assert.equal(result, '')
+    assert.equal(result, '');
 });
 
 QUnit.test( 'Test reverse() returns null for a null param.', function( assert ) {
     var result = textUtilsInstance.reverse(null);
-    assert.equal(result, '')
+    assert.equal(result, '');
 });
 
 QUnit.test( 'Test reverse() removes trailing spaces.', function( assert ) {
@@ -28,8 +28,8 @@ QUnit.test( 'Test reverse() returns empty for boolean param.', function( assert 
     var result = textUtilsInstance.reverse(false);
     assert.equal(result, '');
 
-    var result = textUtilsInstance.reverse(true);
-    assert.equal(result, '')
+    result = textUtilsInstance.reverse(true);
+    assert.equal(result, '');
 });
 
 QUnit.test( 'Test reverse() returns correct reversed values for single words.', function( assert ) {
