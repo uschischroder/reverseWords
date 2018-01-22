@@ -1,5 +1,6 @@
 # textUtils v1
 A javascript library that provides several text functionalities.
+Built with TDD for educational purposes.
 
 ## 1. Using
 Reference the `textUtils.js` file under the `release` folder.
