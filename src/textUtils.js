@@ -1,13 +1,15 @@
+/*jshint esversion: 6 */
+
 var textUtils = function() {
 
     var reverse = function(param) {
-        var reversed = [];
+        let reversed = [];
 
-        if (isValid(param)) return '';
+        if (isValidParameter(param)) return '';
 
         param = param.toString().trim();
 
-        for (var left=0,right=param.length-1;left<=right;left++,right--) {
+        for (let left=0,right=param.length-1;left<=right;left++,right--) {
             reversed[left] = param[right];
             reversed[right] = param[left];
         }
@@ -24,16 +26,31 @@ var textUtils = function() {
         return reversed;
     };
 
-    var isValid = function(param) {
-        var valid = !param  ||
+    var countWords = function(text) {
+        if (isEmpty(text)) return 0;
+
+        let words = text.split(" ");
+        return words.length;
+    };
+
+    var isValidParameter = function(param) {
+        let valid = !param  ||
             (typeof(param) !== "string" && typeof(param) !== "number");
 
         return valid;
     };
 
+    var isEmpty = function(text) {
+        return text == null ||
+            text == undefined ||
+            text.length == 0;
+    };
+
     return {
         reverse : reverse,
-        reverseRec : reverseRec
+        reverseRec : reverseRec,
+        countWords : countWords,
+        isEmpty : isEmpty
     };
 };
 
